@@ -68,9 +68,12 @@ def main():
                                                             #With Conf Hits:427,Miss: 547    
                                                             #Wout Conf Hits:410,Miss: 690
                         ])
+    obs_sum = np.sum(np.sum(observed,1),1)
     for hypot,obs in enumerate(observed):
         print(f"\nH{hypot+1}")
+        print(f"Sample size:{obs_sum[hypot]}")
         twoSampleTest(obs)
+
 
 if __name__ == "__main__":
     main()
