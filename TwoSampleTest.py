@@ -2,7 +2,7 @@
 import numpy as np
 from scipy.stats import chi2
 
-# Section 4.5: Two-Sample Comparisons with Categorical Data
+# Two-Sample Comparisons with Categorical Data
 
 def twoSampleTest(observed):
     # Total number of observations
@@ -25,7 +25,7 @@ def twoSampleTest(observed):
     p_value = 1 - chi2.cdf(chi_square_statistic, df)
 
     # Output the results
-    # print(f"Chi-square statistic: {chi_square_statistic:.3f}")
+    print(f"Chi-square statistic: {chi_square_statistic:.3f}")
     print(f"Degrees of freedom: {df}")
     print(f"P-value: {p_value:.6f}")
 
@@ -45,10 +45,29 @@ def main():
     # Observed data from the study
     # Row 1: HIT, Row 2: MISS
     # Column 1: Behaviour1, Column 2: Behaviour12
-    observed = np.array([[[143, 90], [32, 58]],    # Table 1
-                              [[148, 90], [33, 58]],    # Table 2
-                              [[148, 143], [33, 32]],   # Table 3
-                              [[232, 242], [80, 100]]])
+    observed = np.array([
+                            [[93, 31], [57, 55]],     # H1 
+                                                            #Base Case Hits:93, Miss: 57
+                                                            #No Robot  Hits:31, Miss: 55
+                            [[93, 90], [57, 58]],     # H2      
+                                                            #Base Case Hits:93, Miss: 57
+                                                            #Neutral   Hits:90, Miss: 58
+                            [[143, 90], [32, 58]],    # H3      
+                                                            #Evoking   Hits:143,Miss: 32
+                                                            #Neutral   Hits:90, Miss: 58
+                            [[148, 90], [33, 58]],    # H4      
+                                                            #ATE       Hits:148,Miss: 33
+                                                            #Neutral   Hits:90, Miss: 58
+                            [[143, 148], [32, 33]],   # H5      
+                                                            #Evoking   Hits:143,Miss: 32    
+                                                            #ATE       Hits:148,Miss: 33
+                            [[232, 242], [80, 100]],  # H6
+                                                            #With Conf Hits:232,Miss: 80    
+                                                            #Wout Conf Hits:242,Miss: 100
+                            [[427, 410], [547, 690]], # H7
+                                                            #With Conf Hits:427,Miss: 547    
+                                                            #Wout Conf Hits:410,Miss: 690
+                        ])
     for hypot,obs in enumerate(observed):
         print(f"\nH{hypot+1}")
         twoSampleTest(obs)
