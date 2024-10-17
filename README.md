@@ -1,5 +1,5 @@
 # Investigating the Dynamics of Robot Induced Social Influence
-# ENG4701/FIT4701: Final Year Project - GITHUB
+# ENG4702/FIT4702: Final Year Project - GITHUB
 
 This repository contains Python scripts for analysing experimental data from the Pepper robot experiments. The scripts focus on performing statistical tests for two-sample comparisons using categorical data, specifically chi-square tests and two-proportion z-tests. These analyses help assess hypotheses related to behaviors and interactions observed in the experiment.
 
