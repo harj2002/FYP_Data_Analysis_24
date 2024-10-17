@@ -4,7 +4,7 @@ from scipy.stats import chi2
 
 # Two-Sample Comparisons with Categorical Data
 
-def twoSampleTest(observed):
+def chi_squared_two_sample(observed):
     # Total number of observations
     total_observed = np.sum(observed)
 
@@ -70,7 +70,7 @@ def main():
     for hypot,obs in enumerate(observed):
         print(f"\nH{hypot+1}")
         print(f"Sample size:{obs_sum[hypot]}")
-        twoSampleTest(obs)
+        chi_squared_two_sample(obs)
 
 
 if __name__ == "__main__":

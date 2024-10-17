@@ -9,7 +9,7 @@ This repository contains Python scripts for analyzing experimental data from the
 This script performs chi-square tests for independence on categorical data. It tests whether observed behaviors across different conditions are statistically independent or significantly different.
 
 - **Functions:**
-  - `twoSampleTest(observed)`: Takes a 2x2 matrix of observed values and performs a chi-square test to compare two groups, outputting the chi-square statistic, degrees of freedom, and p-value.
+  - `chi_squared_two_sample(data)`: Takes a 2x2 matrix of observed values and performs a chi-square test to compare two groups, outputting the chi-square statistic, degrees of freedom, and p-value.
   - `main()`: Contains predefined data representing the experiment results and runs chi-square tests on each hypothesis (H1 to H7).
 
 ### `z_test_two_proportion.py`
