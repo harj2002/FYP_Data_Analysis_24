@@ -30,13 +30,10 @@ def twoSampleTest(observed):
     print(f"P-value: {p_value:.6f}")
 
     # Conclusion based on significance levels
-    # alpha_10 = 0.10  # Significance level of 10%
     alpha_5 = 0.05   # Significance level of 5%
 
     if p_value < alpha_5:
         print("Reject the null hypothesis at the 5% significance level.")
-    # elif p_value < alpha_10:
-    #     print("Reject the null hypothesis at the 10% significance level, but not at the 5% level.")
     else:
         print("Fail to reject the null hypothesis.")
 
@@ -44,7 +41,8 @@ def twoSampleTest(observed):
 def main():
     # Observed data from the study
     # Row 1: HIT, Row 2: MISS
-    # Column 1: Behaviour1, Column 2: Behaviour12
+    # Column 1: Behaviour 1, Column 2: Behaviour 2
+    # Python format: [[(row 1 col 1) , (row 1 col 2)],[(row 2 col 1) , (row 2 col 2)]]
     observed = np.array([
                             [[93, 31], [57, 55]],     # H1 
                                                             #Base Case Hits:93, Miss: 57
