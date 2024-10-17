@@ -1,7 +1,7 @@
 # Investigating the Dynamics of Robot Induced Social Influence
 # ENG4701/FIT4701: Final Year Project - GITHUB
 
-This repository contains Python scripts for analyzing experimental data from the Pepper robot experiments. The scripts focus on performing statistical tests for two-sample comparisons using categorical data, specifically chi-square tests and two-proportion z-tests. These analyses help assess hypotheses related to behaviors and interactions observed in the experiment.
+This repository contains Python scripts for analysing experimental data from the Pepper robot experiments. The scripts focus on performing statistical tests for two-sample comparisons using categorical data, specifically chi-square tests and two-proportion z-tests. These analyses help assess hypotheses related to behaviors and interactions observed in the experiment.
 
 ## Files
 
@@ -21,6 +21,9 @@ This script conducts two-proportion z-tests, a statistical method used to compar
 - **Predefined Comparisons:**
   - Confederate presence/absence participation (Abs_vs_Pres).
   - Behavioral comparisons between different conditions (e.g., NS vs. EF, ATE vs. EF).
+
+### Experimental Code
+This folder contains all of the choregraphe behaviour files which can be used to run each behaviour on Pepper.
 
 ## Usage
 Run the scripts from the command line or within a Python environment to perform the statistical tests:
